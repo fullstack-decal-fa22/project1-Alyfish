@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aly's website</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  
+</head>
+
+<body>
+  <header>
+    <h1>Aly Jassani</h1>
+    <nav>
+      <a href="projects.html" target="_blank">My Projects</a>
+      <a href="contactme.html" target="_blank">Contact Me</a>
+    </nav>
+    <style>
+        header {
+  text-align: center;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+nav {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+    </style>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Home town: Kampala, Uganda and Karachi, Pakistan</p>
+      <p>University of California, Berkeley: Computer Science and Economics (Expected graduation: May 2025)</p>
+    </section>
+        <br>
+    <section id="projects">
+      <h2>Projects</h2>
+      <h3>Restaurant Ordering App</h3>
+      <img src="nawab.jpg" alt="Nawab Restaurant App">
+      <p>Worked on restaurant app for the owner of Nawab in Kampala Uganda and developed a full stack app to increase orders and customer convienience</p>
+      <br><br>
+      <h3>3 card Poker game</h3>
+      <img src="poker.jpg" alt="3 card Poker game">
+      <p>2 card poker app on java cmd line and interactive</p>
+      <br><br>
+      <h3>Ants Game</h3>
+      <img src="game.jpg" alt="Ants Game">
+      <p>Ants game cs61A</p>
+      <br><br>
+      <h3> Gitlet, A Custom Controlled Version System</h3>
+      <img src="git.png" alt="Gitlet logo">
+      <p>Gitlet like git cs61b</p>
+    </section>
+  
+    <br><br>
+
+    <div class="Contact">
+        <h1> Contact </h1>
+        <form>
+            
+            <label>Name:</label>
+            <br>
+            <input type="text" id="name" required>
+            <br>
+            <label>Email:</label>
+            <br>
+            <input type="email" id="email" required>
+            <br>
+            <label>Message:</label>
+            <br>
+            <textarea id="message" required></textarea>
+            <br>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+
+        <div class="page3">
+            <h2 class="contactLabel">Contact Info:</h2>
+            <div class="contactGrid">
+                <img src="Gmail.png" alt="gmail" class="contactImg">
+                <label> alyjassani@berkeley.edu </label>
+                <br>
+                <img src="Linkedin.png" alt="LinkedIn" class="contactImg">
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                <br>
+                <img src="Instagram.png" alt="Insta" class="contactImg">
+                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+    
+        <script>
+            
+            const form = document.querySelector('form');
+            const nameInput = document.querySelector('#name');
+            const emailInput = document.querySelector('#email');
+            const messageInput = document.querySelector('#message');
+          
+            
+            form.addEventListener('submit', (event) => {
+              // Prevent the default form submission behavior
+              event.preventDefault();
+          
+              // Get the user's input
+              const name = nameInput.value;
+              const email = emailInput.value;
+              const message = messageInput.value;
+          
+             
+              if (!name || !email || !message) {
+                // If any of the input fields are empty, show an error message
+                alert('Please fill out all fields before submitting the form.');
+                return;
+              }
+          
+              // Check that the email address is in the correct format
+              if (!email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return;
+              }
+          
+              // Send the email
+              
+              alert(`Thank you for your message, ${name}! Your message has been sent to alyjassani@berkeley.edu.`);
+            });
+          </script>
+        </body>
+        </html>
+        
+        <!DOCTYPE html>
+<html>
+
+  
